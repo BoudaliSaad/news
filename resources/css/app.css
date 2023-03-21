@@ -1,0 +1,151 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    height: 80px;
+    padding: 0 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .as {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .as li {
+    margin-right: 55px;
+  }
+  
+  .as li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .as li a:hover {
+    color: #777;
+  }
+  .icons{
+    display: flex;
+  }
+  
+  .icons a {
+    
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    font-size: 24px;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .icons a:hover {
+    color: #777;
+  }
+  
+  .fas {
+    font-size: inherit;
+  }
+  .title{
+    width: 916px;
+    height: 54px;
+    background: #000;
+  }
+  section{
+    margin-top: 30px;
+    
+}
+section .title{
+  
+  padding: 10px;
+ 
+}
+.title .title-text{
+  color: #fff;
+  border-bottom: #ff0000 solid 2px;
+    width:20%;
+    font-weight: bolder;
+}
+.cardl{
+  background: #FFFFFF;
+  box-shadow: 0px 2px 14px rgba(42, 42, 42, 0.24);
+  border-radius: 3px;
+  align-content: center;
+  display: flex;
+}
+
+.card-icon{
+  border-top: 1px solid #2a2a2a2d;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+  text-decoration: none;
+}
+.card-icon a{
+  text-decoration: none;
+}
+.count{
+color: #000;
+font-family: 'Poppins';
+font-style: normal;
+
+font-size: 10px;
+
+
+}
+.btn-read{
+ margin-top: 30px;
+}
+/* scroule */
+
+.img-slid{
+  width: 10rem;
+  height: 12rem;
+  border-radius: 5px;
+}
+.head-slid{
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+/* identical to box height */
+
+display: flex;
+align-items: center;
+
+}
+/* footer */
+.footer-propos{
+  width: 94px;
+height: 42px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 500;
+font-size: 20px;
+line-height: 210%;
+/* identical to box height, or 42px */
+
+text-align: center;
+letter-spacing: 0.02em;
+
+color: #FFFFFF;
+}
+.list-unstyled li a{
+  text-decoration: none;
+  
+}
