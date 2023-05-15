@@ -18,7 +18,7 @@ import { AiFillGithub,AiFillFacebook,AiFillTwitterSquare } from 'react-icons/ai'
 // `
 function Footer() {
     return (
-        <div className="row text-white">
+        <div className="footer row text-white bg-black text-center mb-0">
             <div className="col-md-4"><ul className="list-unstyled mb-0">
                 <li>
                     <a href="#!" className="text-dark text-white">Politique de confidentialité</a>
@@ -43,9 +43,9 @@ function Footer() {
             <div className="col-md-4">
                 <h4 className='footer-propos' >À propos</h4>
                 <section className="mb-4 d-flex justify-content-center">
-                    <div className="m-1"> <AiFillGithub/></div>
-                    <div className="m-1"> <AiFillFacebook/></div>
-                    <div className="m-1"> <AiFillTwitterSquare/></div>
+                    <div className="m-1"> <a href=""><AiFillGithub/></a>  </div>
+                    <div className="m-1">  <a href=""><AiFillFacebook/></a> </div>
+                    <div className="m-1"> <a href=""><AiFillTwitterSquare/></a>  </div>
                 
 
     </section>

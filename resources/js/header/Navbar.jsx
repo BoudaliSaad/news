@@ -1,31 +1,53 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { MdAccountCircle } from 'react-icons/md';
+import { FaBars } from 'react-icons/fa'; // add the FaBars icon for the toggler
+import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
+import myImage from '../../public/img/logo.png';
 
-function Navbar() {
+// import Bootstrap components
+
+function MyNavbar() {
+  const [isOpen, setIsOpen] = useState(false); // create a state variable for the Navbar Toggler
+
+  const toggle = () => setIsOpen(!isOpen); // create a toggle function to switch the state
+
   return (
-    <nav style={{background:'#DEDEDE'}}>
-      <div  className="logo">
-        <img src="logo.png" alt="Logo" />
+    <Navbar color="light" light expand="md">
+      <div className="container">
+        <NavbarBrand href="/">
+        <img src={myImage} alt="image..." />
+        </NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="ml-auto" navbar>
+            <NavItem>
+              <Link to="/" className="nav-link">Accueil</Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/Sport" className="nav-link">Sport</Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/Politique" className="nav-link">Politique</Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/Voyage" className="nav-link">Voyage</Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/Contact" className="nav-link">Contact</Link>
+            </NavItem>
+            <NavItem>
+              <Link to='/login' className="nav-link"><MdAccountCircle/></Link>
+            </NavItem>
+            <NavItem>
+              <Link to='/search' className="nav-link"><AiOutlineSearch/></Link>
+            </NavItem>
+          </Nav>
+        </Collapse>
       </div>
-      <ul className="as">
-        <li><Link to="/">Accueil</Link></li>
-        <li><Link to="/Sport">Sport</Link></li>
-        <li><Link to="/Politique">Politique</Link></li>
-        <li><Link to="/Voyage">Voyage</Link></li>
-        <li><Link to="/Contact">Contact</Link></li>
-      </ul>
-      <div className="icons">
-        <a>
-          <MdAccountCircle/>
-        </a>
-        <a>
-          <AiOutlineSearch/>
-        </a>
-      </div>
-    </nav>
+    </Navbar>
   );
 }
 
-export default Navbar;
+export default MyNavbar;

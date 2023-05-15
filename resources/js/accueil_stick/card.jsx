@@ -1,28 +1,70 @@
-import React from "react";
-import { Card, CardImg, CardBody, CardTitle, CardText, Button } from "reactstrap";
-import { MdOutlineFavoriteBorder } from "react-icons/md"
-import { CiExport } from 'react-icons/ci'
-import { VscBookmark } from 'react-icons/vsc'
-import { NavLink } from "react-router-dom";
+import React, { useState, useEffect ,useContext} from "react";
+import { Row,Col } from "reactstrap";
+import { ApiContext } from "../pagers/Accueil";
+function cardl() {
+  // const [articles, setArticles] = useState([]);
 
- function cardl(){
-    return(
-< div className="cardl mt-3">
+  // useEffect(() => {
+  //   fetch('https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=ec32aeafdb5a4d2eb4087e4822970d5d')
+  //     .then(response => response.json())
+  //     .then(data => setArticles(data.articles))
+  //     .catch(error => console.log(error));
+  // }, []);
+ 
+  const articles= useContext(ApiContext);
+  return (
+    <>
+    
+      {articles.map(news => (
+        
+         
+            <div className="mt-3" style={{ background: '#F5F5F5' }} key={news.title}>
+              <div className="max-w-[370px] mx-auto mb-10 ">
+                <div className="rounded overflow-hidden mb-8">
+                  <img
+                    src={news.urlToImage}
+                    alt="image"
+                    className="w-full"
+                  />
+                </div>
+                <div>
+                  <span
+                    className="bg-primary rounded text-center py-1 px-4 text-xs inline-block leading-loose font-semibold text-white mb-5">
+                    {news.publishedAt}
+                  </span>
+                  <h3>
+                    <a
+                      href="javascript:void(0)"
+                      className="
+                          font-semibold
+                          text-xl
+                          sm:text-2xl
+                          lg:text-xl
+                          xl:text-2xl
+                          mb-4
+                          inline-block
+                          text-dark
+                          hover:text-primary
+                          "
+                    >
+                      {news.title}
+                    </a>
+                  </h3>
+                  <p className="text-base text-body-color">
+                    {news.description}
+                  </p>
 
-              <Card>
-                <CardImg alt="..." src="https://picsum.photos/300/200" top></CardImg>
-                <CardBody>
-                  <CardTitle tag="h4">Card title</CardTitle>
-                  <CardText>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                  </CardText>
-                  <div className="card-icon">
-                  <NavLink href="" style={{ marginRight: '10px'}}><CiExport /><span className="count">20</span></NavLink> <NavLink href="" style={{ marginRight: '10px' }}><MdOutlineFavoriteBorder /><span className="count">20</span></NavLink> <NavLink href="" style={{ marginRight: '10px' }}><VscBookmark /><span className="count">20</span></NavLink>
-                  </div>
-                </CardBody>
-              </Card>
-    </div>
-    )
+
+                </div>
+              </div>
+            </div>
+       
+
+       
+
+      ))}
+      
+    </>
+  )
 }
 export default cardl;

@@ -1,4 +1,4 @@
-nav {
+/* nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,25 +58,101 @@ nav {
   .fas {
     font-size: inherit;
   }
-  .title{
-    width: 916px;
-    height: 54px;
-    background: #000;
+  @media (max-width: 768px) {
+    .as {
+      display: none;
+    }
+  
+    .icons {
+      margin-left: auto;
+    }
+  
+    .icons a {
+      margin-left: 10px;
+    }
+  } */
+  /* navbar or header */
+  /* Navbar container styles */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navbar logo styles */
+.navbar-brand img {
+  width: 80px;
+  height: auto;
+}
+
+/* Navbar links styles */
+.nav-link {
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 20px;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+/* Navbar toggler styles */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+}
+
+/* Navbar account circle styles */
+.nav-link svg {
+  width: 25px;
+  height: auto;
+  margin-right: 10px;
+}
+
+/* Navbar search icon styles */
+.nav-link:last-of-type svg {
+  width: 20px;
+  height: auto;
+}
+
+/* Navbar collapse styles */
+.collapse {
+  justify-content: flex-end;
+}
+
+@media (max-width: 768px) {
+  /* Navbar collapse styles for mobile */
+  .container {
+    flex-direction: column;
   }
+
+  .nav-link {
+    margin: 10px 0;
+  }
+}
+  
+ 
   section{
     margin-top: 30px;
     
 }
 section .title{
-  
+  width:auto;
+  height: 54px;
+  background: #000;
   padding: 10px;
  
 }
 .title .title-text{
   color: #fff;
   border-bottom: #ff0000 solid 2px;
-    width:20%;
-    font-weight: bolder;
+  width:20%;
+  font-weight: bolder;
 }
 .cardl{
   background: #FFFFFF;
@@ -148,4 +224,37 @@ color: #FFFFFF;
 .list-unstyled li a{
   text-decoration: none;
   
+}
+/* contact */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.5rem;
+}
+
+label > input, label > textarea {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+button[type="submit"] {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0069d9;
 }
